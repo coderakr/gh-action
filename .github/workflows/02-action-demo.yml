@@ -1,0 +1,33 @@
+name: 02-ak flask CI workflow
+
+on:
+  push:
+
+jobs:
+    flask-ci-job-2:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: checkout Repository
+            uses: actions/checkout@v6
+          
+          - name: Login to docker hub
+            uses: docker/login-action@v3
+            with:
+              username: ${{ secrets.DOCKER_USERNAME }}
+              password: ${{ secrets.DOCKER_PASSWORD }}
+          
+          - name: Build and push docker image
+            uses: docker/build-push-action@v7
+            with:
+              context: .
+              push: true
+              tags: ayushdock123/ak-flask-app:v1.0.0
+          
+          - name: Run container
+            run: docker run -d -p 5000:5000 --name ak-flask-container ayushdock123/ak-flask-app:v1.0.0
+          
+          - name: Smoke Test
+            run: |
+              sleep 5
+              curl http://localhost:5000/health

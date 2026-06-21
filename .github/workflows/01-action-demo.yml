@@ -12,10 +12,10 @@ jobs:
             uses: actions/checkout@v6
           
           - name: Build docker image
-            run: docker build -t cwvj-flask-app:v1.0.0 .
+            run: docker build -t ak-flask-app:v1.0.0 .
 
           - name: Run container
-            run: docker run -d -p 5000:5000 --name cwvj-flask-container cwvj-flask-app:v1.0.0
+            run: docker run -d -p 5000:5000 --name ak-flask-container ak-flask-app:v1.0.0
 
           - name: Smoke Test
             run: |
