@@ -13,9 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Print a message
-        run: echo "Hello, GitHub Actions!"
-
       - name: Show current directory
         run: pwd
 
@@ -24,3 +21,13 @@ jobs:
 
       - name: List files
         run: ls -la
+
+  say_hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Say Hello
+        run: echo "Hello, World!"
