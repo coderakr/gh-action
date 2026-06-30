@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -21,6 +18,9 @@ jobs:
 
       - name: Show current directory
         run: pwd
+
+      - name: make a directory
+        run: mkdir ak_directory
 
       - name: List files
         run: ls -la
