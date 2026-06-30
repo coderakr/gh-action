@@ -1,15 +1,11 @@
-name: test-github-actions
-
+name: print var name
 on:
-  push:
-  
+    push:
+
 jobs:
-  create-dir:
-    runs-on: ubuntu-latest
+    test-var:
+        runs-on: ubuntu:latest
 
-    steps:
-      - name: create directory
-        run: mkdir test-ak
-
-      - name: list files and dir
-        run: ls -al
+        steps:
+            - name: print actor name
+              run: echo "Actor- $GITHUB_ACTOR "
