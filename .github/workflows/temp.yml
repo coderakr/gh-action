@@ -4,8 +4,12 @@ on:
 
 jobs:
     test-var:
-        runs-on: ubuntu:latest
+        runs-on: ubuntu-latest
 
-        steps:
-            - name: print actor name
-              run: echo "my name is ayush"
+        steps:  
+            - name: Variables name
+              run: |
+                echo "repo: $GITHUB_ACTION_REPOSITORY"
+                echo "Actor name: $GITHUB_ACTOR"
+                echo "Actor Id: $GITHUB_ACTOR_ID"
+                echo "env: GITHUB_ENV"
