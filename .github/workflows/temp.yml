@@ -1,33 +1,12 @@
-name: CI
+name: hello message
 
 on:
   push:
-    branches:
-      - main
-
+  
 jobs:
-  build:
+  Hii:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-
-      - name: Show current directory
-        run: pwd
-
-      - name: make a directory
-        run: mkdir ak_directory
-
-      - name: List files
-        run: ls -la
-
-  say_hello:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-
-      - name: Say Hello
-        run: echo "Hello, World!"
+      - name: print hello
+        run: echo "hii ak"
