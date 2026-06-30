@@ -13,3 +13,4 @@ jobs:
                 echo "Actor name: $GITHUB_ACTOR"
                 echo "Actor Id: $GITHUB_ACTOR_ID"
                 echo "env: $GITHUB_ENV"
+                cat /home/runner/work/_temp/_runner_file_commands/set_env_7d7b72e9-d034-46be-ad30-2d10457a9d29
