@@ -8,4 +8,4 @@ jobs:
 
         steps:
             - name: print actor name
-              run: echo "Actor- $GITHUB_ACTOR "
+              run: echo "my name is ayush"
