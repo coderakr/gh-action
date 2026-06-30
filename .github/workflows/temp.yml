@@ -1,12 +1,15 @@
-name: hello message
+name: test-github-actions
 
 on:
   push:
   
 jobs:
-  Hii:
+  create-dir:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print hello
-        run: echo "hii ak"
+      - name: create directory
+        run: mkdir test-ak
+
+      - name: list files and dir
+        run: ls -al
